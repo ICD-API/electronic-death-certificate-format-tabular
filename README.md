@@ -1,11 +1,13 @@
 ﻿# Simple Tabular Death Certificate exchange format
+This is a specific format used by the [Doris Tool](https://icd.who.int/doris) as a simple tabular alternative to the [standard JSON format](https://github.com/ICD-API/electronic-death-certificate-format).
 
-This format can be used as an Excel (.xlsx) file or an a (.csv) format with separator the comma (`,`). Below we are presenting the fields structure of the death certificate.
-This format is a simplified tabular version of the [standard JSON format](https://github.com/ICD-API/electronic-death-certificate-format)
+This format can be used as an Excel (.xlsx) file or as a comma separated text file (.csv). 
 
-You may find empty sample files here:
+You may find small sample files here:
 - [Excel sample (.xlsx)](sample.xlsx)
 - [Comma separated text file sample (.csv)](sample.csv)
+
+Detailed descriptions of the fields are explained below:
 
 ## Data type
 
@@ -13,11 +15,11 @@ The data type used are:
 
 | Type | Description |
 | --- | --- |
-| `string` | Alphanumeric value insert between quotation marks `"`. |
+| `string` | in CSV files, alphanumeric values need to be in quotation marks `"`. |
 | `integer` | Numeric field, whole numbers allowed |
 | `boolean` | The values allowed are `true` and `false` |
-| `date` | The date field used in the certificate is using the format defined in the [W3C](https://www.w3.org/TR/NOTE-datetime). The date value need to be insert between quotation marks `"`. |
-| `durations` | Durations define the amount of intervening time in a time interval used in the certificate for the interval field. The format is defined in the [ISO_8601](https://en.wikipedia.org/wiki/ISO_8601#Durations). The duration value need to be insert between quotation marks `"`.|
+| `date` | The date field used in the certificate is using the format defined in the [W3C](https://www.w3.org/TR/NOTE-datetime). In CSV files, the date value need to be between quotation marks `"`. |
+| `durations` | Durations define the amount of intervening time in a time interval used in the certificate for the interval field. The format is defined in the [ISO_8601](https://en.wikipedia.org/wiki/ISO_8601#Durations). In CSV files, the duration value need to be insert between quotation marks `"`.|
 
 Example of date:
 
@@ -61,7 +63,6 @@ where:
     M is the minute designator that follows the value for the number of minutes.
     S is the second designator that follows the value for the number of seconds.
 
-For example, "P3Y6M4DT12H30M5S" represents a duration of "three years, six months, four days, twelve hours, thirty minutes, and five seconds".
 To resolve ambiguity, "P1M" is a one-month duration and "PT1M" is a one-minute duration.
 
 Practical examples:
