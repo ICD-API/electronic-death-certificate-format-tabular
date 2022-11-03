@@ -87,7 +87,7 @@ Note: CauseOfDeath fields can be provided either as code, URI or text. we have i
 | `CertificateKey` | _input_ | `string` | Can be used to identify the certificate. |
 | `ICDVersion` | _input_ | `string` | Specify the ICD revision used for the coding of the certificate. DORIS currently supports `ICD11`  |
 | `ICDMinorVersion` | _input_ | `string` | Specify the ICD minor version used for the coding of the certificate associated to the ICD version. |
-| `Sex` | _input_ | `string` | 1:Male, - 2:Female, - 9:Unknown |
+| `Sex` | _input_ | `string` | 0:Male, - 1:Female, - 9:Unknown |
 | `DateBirth` | _input_ | `date` | _see date format above_ |
 | `DateDeath` | _input_ | `date` | _see date format above_ |
 | `EstimatedAge` | _input_ | `durations` | _see durations format above_ |
